@@ -68,7 +68,7 @@
 	//? Объект отвечает за взаимодействие с сервером
 	const newsService = function(){
 		const apiKey = 'aca46562bcce4e8aa03a8a6a7229af7f';
-		const apiUrl = 'https://newsapi.org/v2/';
+		const apiUrl = 'https://news-api-v2.herokuapp.com';
 		
 		return{
 			topHeadlines(country = 'ua', category,cb){
