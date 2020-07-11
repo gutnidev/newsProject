@@ -10,12 +10,12 @@ body{
 .imageText{
     background-color: rgba(22, 22, 22, 0.62);
     height: max-content;
-    max-height: 50%;
+    max-height: 35%;
     margin-top: auto;
 
 }
 
-.forImg:hover .imageText{
+.news-card:hover .imageText{
     max-height: 100%;
     display: block;
 }
@@ -83,4 +83,16 @@ width: 6px;
   left: 50%;
   top: 50%;
   position: absolute;
+}
+
+.news-card{
+    -webkit-box-shadow: 0 0 1px 0 rgba(0,0,0,0.75);
+    -moz-box-shadow: 0 0 1px 0 rgba(0,0,0,0.75);
+    box-shadow: 0 0 1px 0 rgba(0,0,0,0.75);
+}
+
+.news-card:hover{
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 }

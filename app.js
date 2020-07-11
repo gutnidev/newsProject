@@ -65,6 +65,7 @@
 		
 	}()();
 	const collapseSearch = document.getElementById(`collapseSearch`);
+
 	//? Объект отвечает за взаимодействие с сервером
 	const newsService = function(){
 		const apiKey = 'aca46562bcce4e8aa03a8a6a7229af7f';
@@ -93,6 +94,7 @@
 		e.target.elements[`inputSearchNews`].value = ``;
 		
 	}
+
 	//? Эта функция запускает запросы из объекта, который отвечает за работу с сервером
 	function loadNews(country = `ua`, query = ``, category = `general`) {
 		showLoader();
@@ -105,6 +107,7 @@
 		}
 		
 	}
+
 	//? Callback, который передается в сервис работы с сервером, а оттуда в myHttp.
 	function onGetResponce(err, res) {
 		
@@ -117,6 +120,7 @@
 			noResult(res);
 		}
 	}
+
 	//? Функция рендеринга ответа сервера
 	function renderNews(result) {
 		
@@ -132,12 +136,13 @@
 		hideLoader();
 		
 	}
+
 	//? Функция подставляет значение в html код с возвращает одну карту в виде html текста
 	function cardTemplate({title, description, url, urlToImage= `defNewsImage.jpeg`}) {
 		
 		return`
 			<div class="col mb-4 colForOneCard">
-                    <div class="card shadow mb-5 p-1 rounded h-100">
+                    <div class="card news-card mb-5 p-1 rounded h-100">
                         <div>
                             <div class="forImg position-relative bg-secondary">
                                 <a href="${url}" class="" target="_blank">
@@ -158,6 +163,7 @@
             </div>
 		`;
 	}
+
 	//? Функция удаляет старые карточки при новом запросе
 	function delOldCard() {
 		let old = document.querySelectorAll(`.colForOneCard`);
@@ -165,6 +171,7 @@
 				old[i].remove();
 			}
 	}
+
 	//? показываем и прячем лоадер лоадер
 	function showLoader() {
 		let loader = `
@@ -178,6 +185,7 @@
 	function hideLoader() {
 		document.querySelector(`.loader`).remove();
 	}
+
 	//? Тут мы выводим отсутствие результатов поиска
 	function noResult(res) {
 		if(document.querySelector(`.noResContainer`)){
@@ -200,6 +208,7 @@
 			`);
 		}
 	}
+
 	//? Обработчик обшибок
 	function errFunk(err) {
 		switch (err) {
