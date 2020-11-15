@@ -1,6 +1,6 @@
 # News Project
 ### Demo:
-#### https://gutnivlad.github.io/newsProject/
+#### https://gutnidev.github.io/newsProject/
 
 
 ------------
